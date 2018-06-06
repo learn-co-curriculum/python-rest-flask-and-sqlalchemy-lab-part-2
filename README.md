@@ -27,7 +27,7 @@ Our routes for our Tweet resource should follow REST convention and return HTML 
 * A list of all tweet objects
 * A single tweet object that has the same `id` as the id in the URL
 
-## Create Templates for the User Resource
+## Create Templates
 
 Given the above routes, we will need to create four (4) HTML templates. In our templates directory, we have four files named, tweets.py, tweet_show.py, users.py, and user_show.py. The files with the pluralized resource name will be our templates for a collection of the given resource and the files named `[resource]_show` will be for a single object of the given resource. 
 

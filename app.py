@@ -34,49 +34,11 @@ class Tweet(db.Model):
 
 
 # DEFINE ROUTES THAT RETURN APPROPRIATE HTML TEMPLATES HERE
-@app.route('/users')
-def users_index():
-    all_users = db.session.query(User).all()
-    all_users_dicts = [user.to_dict() for user in all_users]
-    return render_template('users.html', users=all_users_dicts)
 
-@app.route('/users/<int:id>')
-def user_show_by_id(id):
-    user = User.query.filter(User.id == id).first().to_dict()
-    return render_template('user_show.html', user=user)
 
-@app.route('/users/<name>')
-def user_show_by_name(name):
-    user = User.query.filter(User.username.like(name)).first().to_dict()
-    return render_template('user_show.html', user=user)
 
-@app.route('/tweets')
-def tweets_index():
-    all_tweets = Tweet.query.all()
-    all_tweets_dicts = [tweet.to_dict() for tweet in all_tweets]
-    return render_template('tweets.html', tweets=all_tweets_dicts)
 
-@app.route('/tweets/<int:id>')
-def tweet_show_by_id(id):
-    tweet = Tweet.query.filter(Tweet.id == id).first().to_dict()
-    return render_template('tweet_show.html', tweet=tweet)
 
-#BONUS
-@app.route('/users/<int:user_id>/tweets')
-def find_tweets_by_user_id(user_id):
-    user_tweets = User.query.filter(User.id == user_id).first().to_dict()
-    return render_template('tweets.html', tweets=user_tweets['tweets'])
-
-@app.route('/users/<user_name>/tweets')
-def find_tweets_by_username(user_name):
-    user_tweets = User.query.filter(User.username == user_name.lower().title()).first().to_dict()
-    return render_template('tweets.html', tweets=user_tweets['tweets'])
-
-@app.route('/tweets/<int:tweet_id>/user')
-def find_user_by_tweet(tweet_id):
-    tweet = Tweet.query.filter(Tweet.id == tweet_id).first().to_dict()
-    user = User.query.filter(User.id == tweet['user_id']).first().to_dict()
-    return render_template('user_show.html', user=user)
 
 
 # run flask application

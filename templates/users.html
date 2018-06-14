@@ -1,0 +1,9 @@
+<ol>
+{% for user in users %}
+    <li>
+        <h3>Username: {{ user.username }}</h3>
+        <h4>ID: {{ user.id }}</h4>
+        <h4>Tweet Count: {{ user.tweets.__len__() }}</h4>
+    </li>
+{% endfor %}
+</ol>

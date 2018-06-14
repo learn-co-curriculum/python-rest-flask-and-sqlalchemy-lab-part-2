@@ -8,7 +8,7 @@ In this lab we are going to practice working with creating a RESTful web app tha
 * Create templates that display data for individual and collections of users and tweets
 * Define RESTful Routes that return HTML for Users
 * Define RESTful Routes that return HTML for Tweets
-* **Bonus:** Define RESTful Rotues that return HTML for related resources
+* **Bonus:** Define RESTful Routes that return HTML for related resources
 
 The configuration for our app will be exactly the same as that from the previous lab when we created the API. All of this configuration code has been provided for us in the app.py file. Note that our models and seed data are also exactly the same.
 
@@ -66,7 +66,7 @@ A single user's page should have an `h3` tag for their `username`, a `p` tag for
 </ul>
 
 ### Multiple Tweets:
-When multiple tweet's are requested the page should have an undordered list showing each tweet. Each list item should have an `h4` tag for the tweet's author (or the username of the user who wrote the tweet), and a `p` tag for its content or `text`.
+When multiple tweet's are requested the page should have an unordered list showing each tweet. Each list item should have an `h4` tag for the tweet's author (or the username of the user who wrote the tweet), and a `p` tag for its content or `text`.
 
 **example:**
 

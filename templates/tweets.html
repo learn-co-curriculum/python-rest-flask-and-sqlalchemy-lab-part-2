@@ -1,0 +1,8 @@
+<ol>
+{% for tweet in tweets %}
+  <li>
+      <h4>Author: {{ tweet.user }}</h4>
+      <p>Content: {{ tweet.text }}</p>
+  </li>
+{% endfor %}
+</ol>

@@ -50,7 +50,7 @@ requests==2.18.4
 simplegeneric==0.8.1
 six==1.11.0
 SQLAlchemy==1.2.7
-tornado==5.0.1
+tornado==6.3.2
 traceback2==1.4.0
 traitlets==4.3.2
 unittest2==1.1.0
